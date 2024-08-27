@@ -1,0 +1,144 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0.5em;
+}
+
+a {
+    color: #ff007a;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ff4d94;
+}
+
+/* Splash Page */
+.splash-page {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url('lasertroncat.png');
+    background-size: 100%; /* Zoom in background image */
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.splash-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay to improve text readability */
+}
+
+/* Navigation Links */
+.nav-links {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+/* Buy $LTC */
+.buy-ltc {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.buy-ltc a {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #ff007a;
+    text-shadow: 0 0 10px #ff007a;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.buy-ltc a:hover {
+    color: #ff4d94;
+    text-shadow: 0 0 20px #ff4d94;
+}
+
+/* Hero Section */
+.hero {
+    z-index: 5;
+    text-shadow: 0 0 20px #ff007a;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 0.2em;
+    text-transform: uppercase;
+    animation: pulseGlow 2s infinite;
+}
+
+.hero .tagline {
+    font-size: 1.5em;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0% {
+        text-shadow: 0 0 20px #ff007a, 0 0 30px #ff007a, 0 0 40px #ff007a;
+    }
+    50% {
+        text-shadow: 0 0 30px #ff007a, 0 0 40px #ff007a, 0 0 50px #ff007a;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff007a, 0 0 30px #ff007a, 0 0 40px #ff007a;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero .tagline {
+        font-size: 1.2em;
+    }
+
+    .nav-links a {
+        margin-left: 10px;
+        font-size: 1em;
+    }
+
+    .buy-ltc a {
+        font-size: 1em;
+    }
+}

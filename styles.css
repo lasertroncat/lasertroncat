@@ -28,7 +28,7 @@ a:hover {
     height: 100vh;
     width: 100%;
     background-image: url('lasertroncat.png');
-    background-size: 100%; /* Zoom in background image */
+    background-size: 95%; /* Zoom in background image */
     background-position: center;
     display: flex;
     flex-direction: column;
